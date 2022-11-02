@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <style>
+      :root {
+        --fg-color1: #03dac6;
+        --fg-color2: #ff0266;
+        --bg-color: #1e1f26;
+      }
+      body {
+        font-family: "Josefin Sans", sans-serif;
+      }
+      * {
+        color: var(--fg-color1);
+        background-color: var(--bg-color);
+      }
+      h1 {
+        text-align: center;
+      }
+      .articles {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+      }
+      .article {
+        padding: 0.25rem;
+        color: var(--fg-color2);
+        border: 2px solid var(--fg-color2);
+        max-width: 25rem;
+      }
+      .article h2,
+      .article p {
+        color: inherit;
+      }
+      .article:nth-child(even) {
+        color: var(--fg-color1);
+        border: 2px solid var(--fg-color1);
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Hello world!</h1>
+    <h2>AHOY SAILOR</h2>
+
+    <div class="articles"></div>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>
