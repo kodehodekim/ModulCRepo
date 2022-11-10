@@ -5,6 +5,13 @@
   box-sizing: border-box;
 }
 
+p {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 800;
+}
+
 body {
   background-color: #0496f7;
   justify-content: center;
@@ -31,7 +38,7 @@ input {
   padding: 20px;
   user-select: none;
   height: 50px;
-  width: 400px;
+  width: 200px;
   border-radius: 6px;
   border: none;
   border: 2px solid #8d0cf7;
@@ -47,6 +54,7 @@ input::placeholder {
   font-family: sans-serif;
   font-size: 15px;
   margin-top: 40px;
+  margin-left: 120px;
   border: 2px solid #7100cf;
   width: 155px;
   height: 50px;
