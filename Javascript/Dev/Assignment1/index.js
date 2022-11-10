@@ -173,7 +173,7 @@ function updatePeople() {
   for (const article of articleElements) {
     const name = article.querySelector(".name");
     const age = article.querySelector(".age");
-    const hobbies = article.querySelector("p");
+    const hobbies = article.querySelector(".hobbies");
     const isMale = article.querySelector(".isMale");
     age.textContent = parseInt(age.textContent) + 1;
     hobbies.textContent += ` - coding`;
@@ -284,19 +284,22 @@ console.log(arrayOfNumbers); // Testing to see if the old array is mutated
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
  */
 
+const alterForEach.forEach = () => {
+  people.age += 1;
+}
+
 /** Excercise 8: Create a function that will sort the people array. (for example sort on Age, or Name)
  *
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
  */
-
 // function used to feed data to the people variable.
 
 // Sort the array by age
-const sortAge = (a, b) => {
-  if (a.age < b.age) {
+let sortAge = (x, y) => {
+  if (x.age < y.age) {
     return -1;
   }
-  if (a.age > b.age) {
+  if (x.age > y.age) {
     return 1;
   }
   return 0;
