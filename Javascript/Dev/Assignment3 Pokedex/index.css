@@ -4,9 +4,35 @@
   font-family: Pokemon;
   src: url(fonts/PokemonSolid.ttf);
 }
+@font-face {
+  font-family: PokemonHollow;
+  src: url(fonts/PokemonHollow.ttf);
+}
 
 * {
   box-sizing: border-box;
+}
+
+button {
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  background: coral;
+  background: linear-gradient(
+    to right,
+    rgba(255, 254, 253, 0.74),
+    rgba(255, 96, 38, 0.74)
+  );
+}
+
+button:hover {
+  background: rgba(255, 254, 253, 0.74);
+}
+
+button:active {
+  background-color: rgba(255, 96, 38, 0.74);
+  box-shadow: 0 2px #666;
+  transform: translateY(4px);
 }
 
 body {
@@ -20,7 +46,10 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: Roboto;
+}
+
+.imagecontainer {
+  align-items: center;
 }
 
 .header {
@@ -59,7 +88,7 @@ h4 {
 
 .pokemon:hover {
   background-color: rgb(245, 187, 187);
-  transform: scale(1.3);
+  transform: scale(1.2);
   border: 3px black solid;
 }
 
@@ -75,11 +104,16 @@ h4 {
 .pokemon .name {
   margin: 15px 0 6px;
 }
+.name {
+  font-family: Pokemon;
+  text-decoration: underline 2px;
+  letter-spacing: 2px;
+}
 
-.pokemon .imgContainer {
-  background-color: rgba(255, 255, 255, 0.6);
-  border-radius: 20%;
-  width: 120px;
-  height: 120px;
-  text-align: center;
+.number {
+  font-family: Pokemon;
+}
+
+.info {
+  font-family: Pokemon;
 }

@@ -22,15 +22,20 @@ const createCard = (pokemon) => {
   const { id, name, sprites, types } = pokemon;
   const type = types[0].type.name;
   const pokeInnerHTML = `
-  <div class="imgContainer">
+  <div class="info">
+    <h3 class="name">${name}</h3>
+    <div class="imgContainer">
     <img src="${sprites.front_default}" alt="${name}" />
   </div>
-  <div class="info">
     <span class="number">Number: ${id}</span>
-    <h3 class="name">Name: ${name}</h3>
-    <small class="type">Type: ${type}</small></div>`;
+    <div><small class="type">Type: ${type}</small></div>
+  `;
   pokemonElement.innerHTML = pokeInnerHTML;
   container.appendChild(pokemonElement);
 };
+
+// const shiney = () => {
+//   const shiney = document.getElementById("img");
+// };
 
 fetchApi();
