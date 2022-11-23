@@ -101,7 +101,7 @@ function randomCharacters() {
   return characters[randomChar];
 }
 
-function generateRandomPassword() {
+function generatePassword() {
   let randomPassword = "";
   for (i = 0; i < passwordLength; i++) {
     randomPassword += randomCharacters();
@@ -109,7 +109,7 @@ function generateRandomPassword() {
   return randomPassword;
 }
 
-function generateRandomPasswordTwo() {
+function generatePasswordTwo() {
   let randomPassword = "";
   for (i = 0; i < passwordLength; i++) {
     randomPassword += randomCharacters();
@@ -117,8 +117,8 @@ function generateRandomPasswordTwo() {
   return randomPassword;
 }
 
-const generatedPasswordTwo = generateRandomPasswordTwo();
-const generatedPassword = generateRandomPassword();
+const generatedPasswordTwo = generatePasswordTwo();
+const generatedPassword = generatePassword();
 
 console.log(
   "Here is your randomly generated passwords: ",

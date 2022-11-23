@@ -18,20 +18,22 @@ const keys = {
   j: sounds[6],
   k: sounds[7],
 };
-const appElement = document.getElementById("app");
-
-const drumKitElements = sounds.reduce((accumulator, sound) => {
-  const button = buttonElement(sound, handleClick);
+const drumApp = document.getElementById("app");
+const drumkit = sounds.reduce((accumulator, sound) => {
+  const button = buttonEl'(sound, handleClick);
   return [...accumulator, button];
 }, []);
-appElement.append(...drumKitElements);
-
-window.onkeyup = function (event) {
-  if (keys[event.key]) audioElement("sounds/" + keys[event.key]).play();
-};
+drumApp.append(...drumkit);
 
 function handleClick(sound) {
   audioElement("sounds/" + sound).play();
+}
+
+function buttonEl(text, clickEvent) {
+  const element = document.createElement("button");
+  element.textContent = text;
+  element.addEventListener("click", () => clickEvent(text));
+  return element;
 }
 
 function audioElement(source) {
@@ -39,9 +41,6 @@ function audioElement(source) {
   return element;
 }
 
-function buttonElement(text, clickEvent) {
-  const element = document.createElement("button");
-  element.textContent = text;
-  element.addEventListener("click", () => clickEvent(text));
-  return element;
-}
+window.onkeyup = function (event) {
+  if (keys[event.key]) audioElement("sounds/" + keys[event.key]).play();
+};
