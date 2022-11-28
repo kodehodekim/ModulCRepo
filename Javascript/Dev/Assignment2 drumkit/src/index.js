@@ -20,13 +20,13 @@ const keys = {
 };
 const drumApp = document.getElementById("app");
 const drumkit = sounds.reduce((accumulator, sound) => {
-  const button = buttonEl'(sound, handleClick);
+  const button = buttonEl(sound, handleClick);
   return [...accumulator, button];
 }, []);
 drumApp.append(...drumkit);
 
 function handleClick(sound) {
-  audioElement("sounds/" + sound).play();
+  audioEl("sounds/" + sound).play();
 }
 
 function buttonEl(text, clickEvent) {
@@ -36,11 +36,11 @@ function buttonEl(text, clickEvent) {
   return element;
 }
 
-function audioElement(source) {
+function audioEl(source) {
   const element = new Audio(source);
   return element;
 }
 
 window.onkeyup = function (event) {
-  if (keys[event.key]) audioElement("sounds/" + keys[event.key]).play();
+  if (keys[event.key]) audioEl("sounds/" + keys[event.key]).play();
 };
