@@ -34,8 +34,4 @@ const createCard = (pokemon) => {
   container.appendChild(pokemonElement);
 };
 
-// const shiney = () => {
-//   const shiney = document.getElementById("img");
-// };
-
 fetchApi();
